@@ -1,8 +1,8 @@
 $listener = [System.Net.HttpListener]::new()
-$listener.Prefixes.Add('http://localhost:8080/')
+$listener.Prefixes.Add('http://localhost:8000/')
 $listener.Start()
 $root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
-Write-Host "Servidor activo en http://localhost:8080/"
+Write-Host "Servidor activo en http://localhost:8000/"
 
 $mimeTypes = @{
     '.html' = 'text/html; charset=utf-8'
